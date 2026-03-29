@@ -9,7 +9,6 @@ public class ColabBuilder implements IBuilder<Colaborador> {
     private Turno turno;
     private Cargo cargo;
     private UnidadeNegocio unidadeNegocio;
-    private Lider lider;
 
     public ColabBuilder(
         String nome, 
@@ -66,11 +65,6 @@ public class ColabBuilder implements IBuilder<Colaborador> {
         return this;
     }
 
-    public ColabBuilder lider (Lider lider){
-        this.lider = lider;
-        return this;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -124,7 +118,4 @@ public class ColabBuilder implements IBuilder<Colaborador> {
         return new Colaborador(this);
     }
 
-    public Lider getLider() {
-        return lider;
-    }
 }

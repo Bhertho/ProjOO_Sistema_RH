@@ -8,7 +8,6 @@ public class Colaborador {
     private Turno turno;
     private Cargo cargo;
     private UnidadeNegocio unidadeNegocio;
-    private Lider lider;
 
     public String getNome() {
         return nome;
@@ -152,7 +151,6 @@ public class Colaborador {
         this.matricula = builder.getMatricula();
         this.situacao = builder.getSituacao();
         this.salario = builder.getSalario();
-        this.lider = builder.getLider();
 
         this.setSetor(builder.getSetor());
         this.setCargo(builder.getCargo());
@@ -160,12 +158,4 @@ public class Colaborador {
         this.setUnidadeNegocio(builder.getUnidadeNegocio());
     }
 
-    public Lider getLider() {
-        return lider;
-    }
-
-    public void setLider(Lider lider) {
-        this.lider = lider;
-    }
-    
 }

@@ -1,8 +1,8 @@
-package sistema_RH.controller;
+package controller;
 
-import sistema_RH.model.Cargo;
-import sistema_RH.model.Colaborador;
-import sistema_RH.model.SolicitaPromocao;
+import model.Cargo;
+import model.Colaborador;
+import model.SolicitaPromocao;
 
 public class SolicitaPromocaoController {
 	

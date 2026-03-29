@@ -1,4 +1,4 @@
-package sistema_RH.model;
+package model;
 
 import java.sql.Time;
 import java.util.Date;

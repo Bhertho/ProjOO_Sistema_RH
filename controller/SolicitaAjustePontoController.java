@@ -1,6 +1,6 @@
-package sistema_RH.controller;
+package controller;
 
-import sistema_RH.model.SolicitaAjustePonto;
+import model.SolicitaAjustePonto;
 import java.util.Date;
 import java.sql.Time;
 

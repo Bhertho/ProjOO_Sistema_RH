@@ -1,6 +1,6 @@
-package sistema_RH.controller;
+package controller;
 
-import sistema_RH.model.Solicitacao;
+import model.Solicitacao;
 
 public class SolicitacaoController {
 

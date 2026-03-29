@@ -1,8 +1,8 @@
-package sistema_RH.controller;
+package controller;
 
 import java.util.Date;
 
-import sistema_RH.model.SolicitaJustificaAusencia;
+import model.SolicitaJustificaAusencia;
 
 public class SolicitaJustificaAusenciaController {
 
