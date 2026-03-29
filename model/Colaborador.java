@@ -8,6 +8,7 @@ public class Colaborador {
     private Turno turno;
     private Cargo cargo;
     private UnidadeNegocio unidadeNegocio;
+    private Lider lider;
 
     public String getNome() {
         return nome;
@@ -78,11 +79,16 @@ public class Colaborador {
     }
 
     public void setSetor(Setor setor){
+
         if (this.setor != null){
             this.setor.excColab(this);
         }
+
         this.setor = setor;
-        this.setor.addColab(this);
+
+        if (this.setor != null){
+            this.setor.addColab(this);
+        }
     }
 
     public String getNomeCargo(){
@@ -90,11 +96,16 @@ public class Colaborador {
     }
 
     public void setCargo(Cargo cargo){
+
         if (this.cargo != null){
             this.cargo.excColab(this);
         }
+
         this.cargo = cargo;
-        this.cargo.addColab(this);
+
+        if (this.cargo != null){
+            this.cargo.addColab(this);
+        }
     }
 
     public String getNomeTurno(){
@@ -102,11 +113,17 @@ public class Colaborador {
     }
 
     public void setTurno(Turno turno){
+
         if (this.turno != null){
             this.turno.excColab(this);
         }
+
         this.turno = turno;
-        this.turno.addColab(this);
+
+        if (this.turno != null){
+            this.turno.addColab(this);
+        }
+
     }
 
     public String getNomeUnNegocio(){
@@ -114,42 +131,41 @@ public class Colaborador {
     }
 
     public void setUnidadeNegocio(UnidadeNegocio unidadeNegocio){
+
         if (this.unidadeNegocio != null){
             this.unidadeNegocio.excColab(this);
         }
+
         this.unidadeNegocio = unidadeNegocio;
-        this.unidadeNegocio.addColab(this);
+
+        if (this.unidadeNegocio != null){
+            this.unidadeNegocio.addColab(this);
+        }
     }
 
-    public Colaborador(
-        String nome,
-        String cpf, 
-        String dtNasc,
-        String dtInicio,
-        int matricula,
-        int situacao,
-        double salario,
-        Setor setor,
-        Turno turno,
-        Cargo cargo,
-        UnidadeNegocio unidadeNegocio
+    Colaborador (ColabBuilder builder){
 
-    ) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.dtNasc = dtNasc;
-        this.dtInicio = dtInicio;
-        this.matricula = matricula;
-        this.situacao = situacao;
-        this.salario = salario;
-        this.setor = setor;
-        this.turno = turno;
-        this.cargo = cargo;
-        this.unidadeNegocio = unidadeNegocio;
-        setor.addColab(this);
-        cargo.addColab(this);
-        turno.addColab(this);
-        unidadeNegocio.addColab(this);
+        this.nome = builder.getNome();
+        this.cpf = builder.getCpf();
+        this.dtNasc = builder.getDtNasc();
+        this.dtInicio = builder.getDtInicio();
+        this.matricula = builder.getMatricula();
+        this.situacao = builder.getSituacao();
+        this.salario = builder.getSalario();
+        this.lider = builder.getLider();
+
+        this.setSetor(builder.getSetor());
+        this.setCargo(builder.getCargo());
+        this.setTurno(builder.getTurno());
+        this.setUnidadeNegocio(builder.getUnidadeNegocio());
     }
 
+    public Lider getLider() {
+        return lider;
+    }
+
+    public void setLider(Lider lider) {
+        this.lider = lider;
+    }
+    
 }

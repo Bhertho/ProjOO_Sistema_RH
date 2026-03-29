@@ -20,36 +20,11 @@ public class Lider extends Colaborador {
         this.setorResponsavel = setorResponsavel;
     }
 
-    public Lider(
-        String nome, 
-        String cpf, 
-        String dtNasc, 
-        String dtInicio, 
-        int matricula, 
-        int situacao, 
-        double salario,
-        Setor setor, 
-        Turno turno, 
-        Cargo cargo, 
-        UnidadeNegocio unidadeNegocio,
-        String nivelLideranca,
-        Setor setorResponsavel
-    ) {
-        super(
-            nome, 
-            cpf, 
-            dtNasc, 
-            dtInicio, 
-            matricula, 
-            situacao, 
-            salario, 
-            setor, 
-            turno, 
-            cargo, 
-            unidadeNegocio
-        );
-        this.nivelLideranca = nivelLideranca;
-        this.setorResponsavel = setorResponsavel;
+    Lider (LiderBuilder builder){
+
+        super(builder);
+        this.nivelLideranca = builder.getNivelLideranca();
+        this.setorResponsavel = builder.getSetorResponsavel();
     }
 
 }
