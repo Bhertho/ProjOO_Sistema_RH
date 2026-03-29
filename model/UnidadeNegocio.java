@@ -1,11 +1,8 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class UnidadeNegocio {
     private String nome, cnpj, razaoSocial, endereco;
-    private List<Colaborador> colaboradores = new ArrayList<>();
+    private ListaColab colaboradores;
 
     public String getNome() {
         return nome;
@@ -51,15 +48,12 @@ public class UnidadeNegocio {
         this.endereco = endereco;
     }
 
-    public void addColab(Colaborador colab){
-        colaboradores.add(colab);
+    public ListaColab getColaboradores() {
+        return colaboradores;
     }
 
-    public void excColab(Colaborador colab){
-        colaboradores.remove(colab);
+    public void setColaboradores(ListaColab colaboradores) {
+        this.colaboradores = colaboradores;
     }
 
-    public int getQuantColab(){
-        return this.colaboradores.size();
-    }
 }
