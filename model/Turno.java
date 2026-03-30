@@ -1,9 +1,11 @@
 package model;
 
 import service.IListaColab;
+import java.time.LocalTime;
 
 public class Turno {
-    private String nome, hrInicio, hrTermino;
+    private String nome;
+    private LocalTime hrInicio, hrTermino;
     private IListaColab colaboradores;
 
     public String getNome() {
@@ -14,26 +16,26 @@ public class Turno {
         this.nome = nome;
     }
 
-    public String getHrInicio() {
+    public LocalTime getHrInicio() {
         return hrInicio;
     }
 
-    public void setHrInicio(String hrInicio) {
+    public void setHrInicio(LocalTime hrInicio) {
         this.hrInicio = hrInicio;
     }
 
-    public String getHrTermino() {
+    public LocalTime getHrTermino() {
         return hrTermino;
     }
 
-    public void setHrTermino(String hrTermino) {
+    public void setHrTermino(LocalTime hrTermino) {
         this.hrTermino = hrTermino;
     }
 
     public Turno(
         String nome,
-        String hrInicio,
-        String hrTermino
+        LocalTime hrInicio,
+        LocalTime hrTermino
     ){
         this.nome = nome;
         this.hrInicio = hrInicio;

@@ -1,9 +1,11 @@
 package model;
+import java.time.LocalDate;
 
 public class ColabBuilder implements IBuilder<Colaborador> {
 
-    private String nome, cpf, dtNasc, dtInicio, dtFim;
-    private int matricula, situacao;
+    private String nome, cpf, matricula;
+    private LocalDate dtNasc, dtInicio, dtFim;
+    private int situacao;
     private double salario;
     private Setor setor;
     private Turno turno;
@@ -20,22 +22,22 @@ public class ColabBuilder implements IBuilder<Colaborador> {
         this.situacao = situacao;
     }
 
-    public ColabBuilder dtNasc (String dtNasc){
+    public ColabBuilder dtNasc (LocalDate dtNasc){
         this.dtNasc = dtNasc;
         return this;
     }
 
-    public ColabBuilder dtInicio (String dtInicio){
+    public ColabBuilder dtInicio (LocalDate dtInicio){
         this.dtInicio = dtInicio;
         return this;
     }
 
-    public ColabBuilder dtFim (String dtFim){
+    public ColabBuilder dtFim (LocalDate dtFim){
         this.dtFim = dtFim;
         return this;
     }
 
-    public ColabBuilder matricula (int matricula){
+    public ColabBuilder matricula (String matricula){
         this.matricula = matricula;
         return this;
     }
@@ -73,19 +75,19 @@ public class ColabBuilder implements IBuilder<Colaborador> {
         return cpf;
     }
 
-    public String getDtNasc() {
+    public LocalDate getDtNasc() {
         return dtNasc;
     }
 
-    public String getDtInicio() {
+    public LocalDate getDtInicio() {
         return dtInicio;
     }
 
-    public String getDtFim() {
+    public LocalDate getDtFim() {
         return dtFim;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 

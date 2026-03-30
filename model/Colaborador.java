@@ -1,8 +1,10 @@
 package model;
+import java.time.LocalDate;
 
 public class Colaborador {
-    private String nome, cpf, dtNasc, dtInicio, dtFim;
-    private int matricula, situacao;
+    private String nome, cpf, matricula;
+    private LocalDate dtNasc, dtInicio, dtFim;
+    private int situacao;
     private double salario;
     private Setor setor;
     private Turno turno;
@@ -25,35 +27,35 @@ public class Colaborador {
         this.cpf = cpf;
     }
 
-    public String getDtNasc() {
+    public LocalDate getDtNasc() {
         return dtNasc;
     }
 
-    public void setDtNasc(String dtNasc) {
+    public void setDtNasc(LocalDate dtNasc) {
         this.dtNasc = dtNasc;
     }
 
-    public String getDtInicio() {
+    public LocalDate getDtInicio() {
         return dtInicio;
     }
 
-    public void setDtInicio(String dtInicio) {
+    public void setDtInicio(LocalDate dtInicio) {
         this.dtInicio = dtInicio;
     }
 
-    public String getDtFim() {
+    public LocalDate getDtFim() {
         return dtFim;
     }
 
-    public void setDtFim(String dtFim) {
+    public void setDtFim(LocalDate dtFim) {
         this.dtFim = dtFim;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
