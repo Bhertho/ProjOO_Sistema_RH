@@ -3,8 +3,9 @@ package service;
 import model.Colaborador;
 import model.Setor;
 
-public class MudancaSetorService implements IMudancaSetorService{
+public class SetorService implements ISetorService{
     
+    @Override
     public String mudarSetor(
         Colaborador colab,
         Setor setor

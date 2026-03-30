@@ -35,11 +35,13 @@ public class Turno {
     public Turno(
         String nome,
         LocalTime hrInicio,
-        LocalTime hrTermino
+        LocalTime hrTermino,
+        IListaColabService lista
     ){
         this.nome = nome;
         this.hrInicio = hrInicio;
         this.hrTermino = hrTermino;
+        this.colaboradores = lista;
     }
 
     public IListaColabService getColaboradores() {

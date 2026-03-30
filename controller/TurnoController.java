@@ -5,6 +5,9 @@ import java.time.LocalTime;
 import model.Colaborador;
 import model.Turno;
 import service.ITurnoService;
+import service.ListaColabService;
+import service.IListaColabService;
+import service.TurnoService;
 
 public class TurnoController {
     private ITurnoService servico;
@@ -27,6 +30,7 @@ public class TurnoController {
         LocalTime hrInicio,
         LocalTime hrTermino
     ) {
-        return new Turno(nome, hrInicio, hrTermino);
+        IListaColabService lista = new ListaColabService();
+        return new Turno(nome, hrInicio, hrTermino, lista);
     }
 }

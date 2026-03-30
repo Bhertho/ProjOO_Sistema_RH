@@ -3,7 +3,7 @@ package service;
 import model.Cargo;
 import model.Colaborador;
 
-public interface IPromocaoService {
+public interface ICargoService {
 
     public String promoverColab(
         Colaborador colab,

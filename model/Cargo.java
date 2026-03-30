@@ -1,11 +1,12 @@
 package model;
 
+import service.IListaColabService;
 import service.ListaColabService;
 
 public class Cargo {
     private String nome, responsabilidades;
     private double baseSalarial;
-    private ListaColabService colaboradores;
+    private IListaColabService colaboradores;
 
     public String getNome() {
         return nome;
@@ -34,18 +35,20 @@ public class Cargo {
     public Cargo(
         String nome, 
         String responsabilidades, 
-        double baseSalarial
+        double baseSalarial,
+        IListaColabService lista
     ) {
         this.nome = nome;
         this.responsabilidades = responsabilidades;
         this.baseSalarial = baseSalarial;
+        this.colaboradores = lista;
     }
     
-    public ListaColabService getColaboradores() {
+    public IListaColabService getColaboradores() {
         return colaboradores;
     }
 
-    public void setColaboradores(ListaColabService colaboradores) {
+    public void setColaboradores(IListaColabService colaboradores) {
         this.colaboradores = colaboradores;
     }
 

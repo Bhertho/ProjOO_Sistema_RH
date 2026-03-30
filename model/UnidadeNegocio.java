@@ -1,10 +1,11 @@
 package model;
 
+import service.IListaColabService;
 import service.ListaColabService;
 
 public class UnidadeNegocio {
     private String nome, cnpj, razaoSocial, endereco;
-    private ListaColabService colaboradores;
+    private IListaColabService colaboradores;
 
     public String getNome() {
         return nome;
@@ -42,19 +43,21 @@ public class UnidadeNegocio {
         String nome, 
         String cnpj, 
         String razaoSocial, 
-        String endereco
+        String endereco,
+        IListaColabService lista
     ) {
         this.nome = nome;
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.endereco = endereco;
+        this.colaboradores = lista;
     }
 
-    public ListaColabService getColaboradores() {
+    public IListaColabService getColaboradores() {
         return colaboradores;
     }
 
-    public void setColaboradores(ListaColabService colaboradores) {
+    public void setColaboradores(IListaColabService colaboradores) {
         this.colaboradores = colaboradores;
     }
 

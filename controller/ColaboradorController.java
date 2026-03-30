@@ -7,41 +7,51 @@ import service.ColaboradorService;
 
 public class ColaboradorController {
 
-    private Colaborador colab;
     private ColaboradorService servico = new ColaboradorService();
 
-    public String cadastrarColaborador(ColabBuilder builder){
+    public Colaborador cadastrarColaborador(ColabBuilder builder){
         Colaborador colab = builder.build();
-        this.colab = colab;
-        return "Colaborador " + colab.getNome() + " foi salvo!";
+        colab.atualizarSituacao();
+        
+        return colab;
     }
 
-    public String alterarNome(String nome){
-        this.colab.setNome(nome);
+    public String alterarNome(Colaborador colab, String nome){
+        colab.setNome(nome);
+        colab.atualizarSituacao();
         return "Nome alterado";
     }
 
-    public String alterarCpf(String cpf){
-        this.colab.setCpf(cpf);
+    public String alterarCpf(Colaborador colab, String cpf){
+        colab.setCpf(cpf);
+        colab.atualizarSituacao();
         return "CPF alterado";
     }
 
-    public String alterarDtNasc(LocalDate dtNasc){
-        this.colab.setDtNasc(dtNasc);
+    public String alterarDtNasc(Colaborador colab, LocalDate dtNasc){
+        colab.setDtNasc(dtNasc);
+        colab.atualizarSituacao();
         return "Data Nascimento alterada";
     }
 
-    public String alterarDtInicio(LocalDate dtInicio){
-        this.colab.setDtInicio(dtInicio);
+    public String alterarDtInicio(Colaborador colab, LocalDate dtInicio){
+        colab.setDtInicio(dtInicio);
+        colab.atualizarSituacao();
         return "Data de inicio alterada";
     }
 
-    public String cadastrarMatricula(String matricula){
-        return servico.cadastrarMatricula(this.colab, matricula);
+    public String alterarSalario(Colaborador colab, double salario){
+        colab.setSalario(salario);
+        colab.atualizarSituacao();
+        return "Salario alterado";
     }
 
-    public String desligarColaborador(){
-        return servico.desligarColaborador(this.colab);
+    public String cadastrarMatricula(Colaborador colab, String matricula){
+        return servico.cadastrarMatricula(colab, matricula);
+    }
+
+    public String desligarColaborador(Colaborador colab){
+        return servico.desligarColaborador(colab);
     }
 
 }

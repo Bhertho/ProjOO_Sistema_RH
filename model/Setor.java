@@ -14,8 +14,9 @@ public class Setor {
         return nomeSetor;
     }
 
-    public Setor(String nomeSetor){
+    public Setor(String nomeSetor, IListaColabService lista){
         this.nomeSetor = nomeSetor;
+        this.colaboradores = lista;
     }
 
     public IListaColabService getColaboradores() {

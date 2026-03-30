@@ -3,7 +3,7 @@ package service;
 import model.Colaborador;
 import model.UnidadeNegocio;
 
-public interface ITransferenciaUnidadeService {
+public interface IUnidadeService {
 
     public String transferirColab(
         Colaborador colab,

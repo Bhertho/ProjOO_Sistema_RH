@@ -1,8 +1,8 @@
 package service;
-import model.Colaborador;
 import model.Cargo;
+import model.Colaborador;
 
-public class PromocaoService implements IPromocaoService{
+public class CargoService implements ICargoService{
 
     public String promoverColab (
         Colaborador colab,
