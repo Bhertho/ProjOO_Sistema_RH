@@ -18,7 +18,7 @@ public class SolicitaFeriasController {
         service.informarDatas(s, inicio, fim);
     }
 
-    public void calcularPeriodo(SolicitaFerias s, CalculoFeriasStrategy strategy) {
-        service.calcularPeriodo(s, strategy);
+    public int calcularPeriodo(SolicitaFerias s, CalculoFeriasStrategy strategy) {
+        return strategy.calcularDias(s);
     }
 }

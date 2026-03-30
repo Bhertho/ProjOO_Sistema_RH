@@ -5,7 +5,7 @@ import service.SolicitacaoService;
 import strategy.AvaliacaoStrategy;
 
 public class SolicitacaoController {
-
+	
     private SolicitacaoService service;
 
     public SolicitacaoController(SolicitacaoService service) {
