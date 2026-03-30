@@ -73,73 +73,36 @@ public class Colaborador {
         this.salario = salario;
     }
 
-    public String getNomeSetor(){
-        return this.setor.getNomeSetor();
+    public Setor getSetor(){
+        return this.setor;
     }
 
     public void setSetor(Setor setor){
-
-        if (this.setor != null){
-            this.setor.excColab(this);
-        }
-
         this.setor = setor;
-
-        if (this.setor != null){
-            this.setor.addColab(this);
-        }
     }
 
-    public String getNomeCargo(){
-        return this.cargo.getNome();
+    public Cargo getCargo(){
+        return this.cargo;
     }
 
     public void setCargo(Cargo cargo){
-
-        if (this.cargo != null){
-            this.cargo.excColab(this);
-        }
-
         this.cargo = cargo;
-
-        if (this.cargo != null){
-            this.cargo.addColab(this);
-        }
     }
 
-    public String getNomeTurno(){
-        return this.turno.getTurno();
+    public Turno getTurno(){
+        return this.turno;
     }
 
     public void setTurno(Turno turno){
-
-        if (this.turno != null){
-            this.turno.excColab(this);
-        }
-
         this.turno = turno;
-
-        if (this.turno != null){
-            this.turno.addColab(this);
-        }
-
     }
 
-    public String getNomeUnNegocio(){
-        return this.unidadeNegocio.getNome();
+    public UnidadeNegocio getUnidadeNegocio(){
+        return this.unidadeNegocio;
     }
 
     public void setUnidadeNegocio(UnidadeNegocio unidadeNegocio){
-
-        if (this.unidadeNegocio != null){
-            this.unidadeNegocio.excColab(this);
-        }
-
         this.unidadeNegocio = unidadeNegocio;
-
-        if (this.unidadeNegocio != null){
-            this.unidadeNegocio.addColab(this);
-        }
     }
 
     Colaborador (ColabBuilder builder){

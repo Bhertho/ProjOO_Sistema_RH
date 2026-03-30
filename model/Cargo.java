@@ -1,5 +1,7 @@
 package model;
 
+import service.ListaColab;
+
 public class Cargo {
     private String nome, responsabilidades;
     private double baseSalarial;
@@ -46,6 +48,5 @@ public class Cargo {
     public void setColaboradores(ListaColab colaboradores) {
         this.colaboradores = colaboradores;
     }
-
 
 }

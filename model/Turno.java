@@ -1,18 +1,17 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
+import service.IListaColab;
 
 public class Turno {
-    private String turno, hrInicio, hrTermino;
-    private List<Colaborador> colaboradores = new ArrayList<>();
+    private String nome, hrInicio, hrTermino;
+    private IListaColab colaboradores;
 
-    public String getTurno() {
-        return turno;
+    public String getNome() {
+        return this.nome;
     }
 
-    public void setTurno(String turno) {
-        this.turno = turno;
+    public void setTurno(String nome) {
+        this.nome = nome;
     }
 
     public String getHrInicio() {
@@ -32,24 +31,22 @@ public class Turno {
     }
 
     public Turno(
-        String turno,
+        String nome,
         String hrInicio,
         String hrTermino
     ){
-        this.turno = turno;
+        this.nome = nome;
         this.hrInicio = hrInicio;
         this.hrTermino = hrTermino;
     }
 
-    public void addColab(Colaborador colab){
-        colaboradores.add(colab);
+    public IListaColab getColaboradores() {
+        return colaboradores;
     }
 
-    public void excColab(Colaborador colab){
-        colaboradores.remove(colab);
+    public void setColaboradores(IListaColab colaboradores) {
+        this.colaboradores = colaboradores;
     }
 
-    public int getQuantColab(){
-        return this.colaboradores.size();
-    }
+
 }

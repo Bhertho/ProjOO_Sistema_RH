@@ -1,8 +1,9 @@
-package model;
+package service;
 import java.util.List;
 import java.util.ArrayList;
+import model.Colaborador;
 
-public class ListaColab {
+public class ListaColab implements IListaColab {
     private List<Colaborador> colaboradores = new ArrayList<>();
 
     public void addColab(Colaborador colab){

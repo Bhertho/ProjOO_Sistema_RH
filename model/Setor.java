@@ -1,8 +1,10 @@
 package model;
 
+import service.IListaColab;
+
 public class Setor {
     private String nomeSetor;
-    private ListaColab colaboradores;
+    private IListaColab colaboradores;
 
     public void setNomeSetor(String nomeSetor){
         this.nomeSetor = nomeSetor;
@@ -16,11 +18,11 @@ public class Setor {
         this.nomeSetor = nomeSetor;
     }
 
-    public ListaColab getColaboradores() {
+    public IListaColab getColaboradores() {
         return colaboradores;
     }
 
-    public void setColaboradores(ListaColab colaboradores) {
+    public void setColaboradores(IListaColab colaboradores) {
         this.colaboradores = colaboradores;
     }
     

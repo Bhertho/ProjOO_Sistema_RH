@@ -1,5 +1,7 @@
 package model;
 
+import service.ListaColab;
+
 public class UnidadeNegocio {
     private String nome, cnpj, razaoSocial, endereco;
     private ListaColab colaboradores;
