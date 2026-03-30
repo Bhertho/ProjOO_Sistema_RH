@@ -1,7 +1,6 @@
 package model;
 
 import service.IListaColabService;
-import service.ListaColabService;
 
 public class Cargo {
     private String nome, responsabilidades;

@@ -7,7 +7,6 @@ import model.Turno;
 import service.ITurnoService;
 import service.ListaColabService;
 import service.IListaColabService;
-import service.TurnoService;
 
 public class TurnoController {
     private ITurnoService servico;
