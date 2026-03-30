@@ -2,10 +2,10 @@ package controller;
 
 import model.Colaborador;
 import model.Turno;
-import service.IMudancaTurno;
+import service.IMudancaTurnoService;
 
 public class MudancaTurnoController {
-    private IMudancaTurno servico;
+    private IMudancaTurnoService servico;
     
     public String mudarTurno(
         Colaborador colab,
@@ -14,7 +14,7 @@ public class MudancaTurnoController {
         return servico.mudarTurno(colab, turno);
     }
 
-    public MudancaTurnoController(IMudancaTurno servico){
+    public MudancaTurnoController(IMudancaTurnoService servico){
         this.servico = servico;
     }
 

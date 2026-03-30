@@ -3,7 +3,7 @@ package service;
 import model.Colaborador;
 import model.Setor;
 
-public class MudancaSetor implements IMudancaSetor{
+public class MudancaSetorService implements IMudancaSetorService{
     
     public String mudarSetor(
         Colaborador colab,

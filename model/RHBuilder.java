@@ -4,7 +4,7 @@ public class RHBuilder extends ColabBuilder {
     private String areaAtuacao;
 
     public RHBuilder(String nome, String cpf, int situacao) {
-        super(nome, cpf, situacao);
+        super(nome, cpf);
     }
 
     public RHBuilder areaAtuacao(String areaAtuacao) {

@@ -5,7 +5,7 @@ public class LiderBuilder extends ColabBuilder {
     private Setor setorResponsavel;
 
     public LiderBuilder(String nome, String cpf, int situacao) {
-        super(nome, cpf, situacao);
+        super(nome, cpf);
     }
 
     public LiderBuilder nivelLideranca(String nivelLideranca) {

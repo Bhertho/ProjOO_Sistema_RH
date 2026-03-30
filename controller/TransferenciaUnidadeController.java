@@ -2,13 +2,13 @@ package controller;
 
 import model.Colaborador;
 import model.UnidadeNegocio;
-import service.ITransferenciaUnidade;
+import service.ITransferenciaUnidadeService;
 
 public class TransferenciaUnidadeController {
     
-    private ITransferenciaUnidade servico;
+    private ITransferenciaUnidadeService servico;
 
-    public TransferenciaUnidadeController(ITransferenciaUnidade servico){
+    public TransferenciaUnidadeController(ITransferenciaUnidadeService servico){
         this.servico = servico;
     }
 

@@ -37,7 +37,11 @@ public class ColaboradorController {
     }
 
     public String cadastrarMatricula(String matricula){
-        return servico.cadastrarMatricula(colab, matricula);
+        return servico.cadastrarMatricula(this.colab, matricula);
+    }
+
+    public String desligarColaborador(){
+        return servico.desligarColaborador(this.colab);
     }
 
 }

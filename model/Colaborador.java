@@ -2,9 +2,8 @@ package model;
 import java.time.LocalDate;
 
 public class Colaborador {
-    private String nome, cpf, matricula;
+    private String nome, cpf, matricula, situacao;
     private LocalDate dtNasc, dtInicio, dtFim;
-    private int situacao;
     private double salario;
     private Setor setor;
     private Turno turno;
@@ -59,11 +58,11 @@ public class Colaborador {
         this.matricula = matricula;
     }
 
-    public int getSituacao() {
+    public String getSituacao() {
         return situacao;
     }
 
-    public void setSituacao(int situacao) {
+    public void setSituacao(String situacao) {
         this.situacao = situacao;
     }
 
@@ -114,13 +113,36 @@ public class Colaborador {
         this.dtNasc = builder.getDtNasc();
         this.dtInicio = builder.getDtInicio();
         this.matricula = builder.getMatricula();
-        this.situacao = builder.getSituacao();
         this.salario = builder.getSalario();
 
         this.setSetor(builder.getSetor());
         this.setCargo(builder.getCargo());
         this.setTurno(builder.getTurno());
         this.setUnidadeNegocio(builder.getUnidadeNegocio());
+    }
+
+    public void atualizarSituacao(){
+        if (this.dtFim != null){
+            this.situacao = "Desligado";
+        }
+        else if (
+            this.dtNasc == null
+            | this.dtInicio == null
+            | this.matricula == null
+            | this.salario == 0 
+            | this.setor == null
+            | this.turno == null
+            | this.cargo == null
+            | this.unidadeNegocio == null
+        ) {
+            this.situacao = "Cadastro Incompleto";
+        }
+        else if (this.dtInicio.isAfter(LocalDate.now())) {
+            this.situacao = "Trabalhando";
+        }
+        else {
+            this.situacao = "Cadastro Completo";
+        }
     }
 
 }

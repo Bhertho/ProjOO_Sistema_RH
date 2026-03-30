@@ -1,7 +1,7 @@
 package service;
 import model.Colaborador;
 
-public interface IListaColab {
+public interface IListaColabService {
     public void addColab(Colaborador colab);
 
     public void excColab(Colaborador colab);

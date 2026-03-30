@@ -2,10 +2,10 @@ package controller;
 
 import model.Colaborador;
 import model.Setor;
-import service.IMudancaSetor;
+import service.IMudancaSetorService;
 
 public class MudancaSetorController {
-    private IMudancaSetor servico;
+    private IMudancaSetorService servico;
     
     public String mudarSetor(
         Colaborador colab,
@@ -14,7 +14,7 @@ public class MudancaSetorController {
         return servico.mudarSetor(colab, setor);
     }
 
-    public MudancaSetorController(IMudancaSetor servico){
+    public MudancaSetorController(IMudancaSetorService servico){
         this.servico = servico;
     }
 

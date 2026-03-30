@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.ArrayList;
 import model.Colaborador;
 
-public class ListaColab implements IListaColab {
+public class ListaColabService implements IListaColabService {
     private List<Colaborador> colaboradores = new ArrayList<>();
 
     public void addColab(Colaborador colab){

@@ -1,12 +1,12 @@
 package model;
 
-import service.IListaColab;
+import service.IListaColabService;
 import java.time.LocalTime;
 
 public class Turno {
     private String nome;
     private LocalTime hrInicio, hrTermino;
-    private IListaColab colaboradores;
+    private IListaColabService colaboradores;
 
     public String getNome() {
         return this.nome;
@@ -42,11 +42,11 @@ public class Turno {
         this.hrTermino = hrTermino;
     }
 
-    public IListaColab getColaboradores() {
+    public IListaColabService getColaboradores() {
         return colaboradores;
     }
 
-    public void setColaboradores(IListaColab colaboradores) {
+    public void setColaboradores(IListaColabService colaboradores) {
         this.colaboradores = colaboradores;
     }
 

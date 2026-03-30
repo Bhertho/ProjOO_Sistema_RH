@@ -1,11 +1,11 @@
 package model;
 
-import service.ListaColab;
+import service.ListaColabService;
 
 public class Cargo {
     private String nome, responsabilidades;
     private double baseSalarial;
-    private ListaColab colaboradores;
+    private ListaColabService colaboradores;
 
     public String getNome() {
         return nome;
@@ -41,11 +41,11 @@ public class Cargo {
         this.baseSalarial = baseSalarial;
     }
     
-    public ListaColab getColaboradores() {
+    public ListaColabService getColaboradores() {
         return colaboradores;
     }
 
-    public void setColaboradores(ListaColab colaboradores) {
+    public void setColaboradores(ListaColabService colaboradores) {
         this.colaboradores = colaboradores;
     }
 

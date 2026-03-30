@@ -1,5 +1,6 @@
 package service;
 import model.Colaborador;
+import java.time.LocalDate;
 
 public class ColaboradorService {
     
@@ -10,6 +11,17 @@ public class ColaboradorService {
         else{
             colab.setMatricula(matricula);
             return "Matricula cadastrada";
+        }
+    }
+
+    public String desligarColaborador (Colaborador colab){
+        if (colab.getDtFim() == null){
+            colab.setDtFim(LocalDate.now());
+            colab.atualizarSituacao();
+            return "Colaborador " + colab.getNome() + " foi desligado!";
+        }
+        else{
+            return "Colaborador " + colab.getNome() + " já está desligado! \nNenhuma alteração foi realizada.";
         }
     }
 

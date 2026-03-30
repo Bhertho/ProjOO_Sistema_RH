@@ -3,9 +3,8 @@ import java.time.LocalDate;
 
 public class ColabBuilder implements IBuilder<Colaborador> {
 
-    private String nome, cpf, matricula;
+    private String nome, cpf, matricula, situacao;
     private LocalDate dtNasc, dtInicio, dtFim;
-    private int situacao;
     private double salario;
     private Setor setor;
     private Turno turno;
@@ -14,12 +13,10 @@ public class ColabBuilder implements IBuilder<Colaborador> {
 
     public ColabBuilder(
         String nome, 
-        String cpf,
-        int situacao
+        String cpf
     ) {
         this.nome = nome;
         this.cpf = cpf;
-        this.situacao = situacao;
     }
 
     public ColabBuilder dtNasc (LocalDate dtNasc){
@@ -91,7 +88,7 @@ public class ColabBuilder implements IBuilder<Colaborador> {
         return matricula;
     }
 
-    public int getSituacao() {
+    public String getSituacao() {
         return situacao;
     }
 
