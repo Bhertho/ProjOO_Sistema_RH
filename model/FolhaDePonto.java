@@ -22,8 +22,4 @@ public class FolhaDePonto {
     public void setDtFim(Date dtFim) {
         this.dtFim = dtFim;
     }
-
-    public String visualizarEspelho() {
-        return "Folha de ponto de " + dtInicio + " até " + dtFim;
-    }
 }
