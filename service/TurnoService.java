@@ -3,7 +3,7 @@ package service;
 import model.Colaborador;
 import model.Turno;
 
-public class MudancaTurnoService implements IMudancaTurnoService{
+public class TurnoService implements ITurnoService{
     
     public String mudarTurno(
         Colaborador colab,
