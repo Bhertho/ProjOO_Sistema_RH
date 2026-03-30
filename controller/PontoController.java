@@ -1,23 +1,28 @@
 package controller;
 
-import model.Ponto;
 import java.time.LocalDateTime;
+
+import model.Ponto;
+import service.PontoService;
+import strategy.ValidacaoPontoStrategy;
 
 public class PontoController {
 
+    private PontoService service;
+
+    public PontoController(PontoService service) {
+        this.service = service;
+    }
+
     public void registrarPonto(Ponto p, LocalDateTime marcacao, String relogio) {
-        p.setMarcacao(marcacao);
-        p.setRelogio(relogio);
+        service.registrarPonto(p, marcacao, relogio);
     }
 
     public void ajustarPonto(Ponto p, LocalDateTime novaMarcacao) {
-        p.ajustarPonto(novaMarcacao);
+        service.ajustarPonto(p, novaMarcacao);
     }
 
-    public boolean validar(Ponto p) {
-        if (p.getMarcacao() == null || p.getRelogio() == null) {
-            return false;
-        }
-        return true;
+    public boolean validar(Ponto p, ValidacaoPontoStrategy strategy) {
+        return service.validar(p, strategy);
     }
 }

@@ -1,23 +1,29 @@
 package controller;
 
-import model.FolhaDePonto;
 import java.util.Date;
+
+import model.FolhaDePonto;
+import service.FolhaDePontoService;
+import strategy.ValidacaoFolhaStrategy;
+import strategy.VisualizacaoFolhaStrategy;
 
 public class FolhaDePontoController {
 
+    private FolhaDePontoService service;
+
+    public FolhaDePontoController(FolhaDePontoService service) {
+        this.service = service;
+    }
+
     public void definirPeriodo(FolhaDePonto f, Date inicio, Date fim) {
-        f.setDtInicio(inicio);
-        f.setDtFim(fim);
+        service.definirPeriodo(f, inicio, fim);
     }
 
-    public String visualizarEspelho(FolhaDePonto f) {
-        return f.visualizarEspelho();
+    public boolean validar(FolhaDePonto f, ValidacaoFolhaStrategy strategy) {
+        return service.validar(f, strategy);
     }
 
-    public boolean validar(FolhaDePonto f) {
-        if (f.getDtInicio() == null || f.getDtFim() == null) {
-            return false;
-        }
-        return true;
+    public String visualizar(FolhaDePonto f, VisualizacaoFolhaStrategy strategy) {
+        return service.visualizar(f, strategy);
     }
 }
