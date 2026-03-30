@@ -2,6 +2,11 @@ package controller;
 
 import model.ColabBuilder;
 import model.Colaborador;
+import model.LiderBuilder;
+import model.Lider;
+import model.RHBuilder;
+import model.FuncRH;
+
 import java.time.LocalDate;
 import service.ColaboradorService;
 
@@ -11,6 +16,20 @@ public class ColaboradorController {
 
     public Colaborador cadastrarColaborador(ColabBuilder builder){
         Colaborador colab = builder.build();
+        colab.atualizarSituacao();
+        
+        return colab;
+    }
+
+    public Lider cadastrarColaborador(LiderBuilder builder){
+        Lider colab = builder.build();
+        colab.atualizarSituacao();
+        
+        return colab;
+    }
+
+    public FuncRH cadastrarColaborador(RHBuilder builder){
+        FuncRH colab = builder.build();
         colab.atualizarSituacao();
         
         return colab;

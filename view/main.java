@@ -158,5 +158,52 @@ public class main {
 
         System.out.println(geraldo.getSituacao());
 
+        System.out.println("------------");
+
+        /* Construindo Lider */
+
+        // Criando o cadastro de lider com o Builder
+        LiderBuilder fredBuilder = new LiderBuilder(
+            "Geraldo Inocencio Gentil", 
+            "899.887.653-88"
+        ).setorResponsavel(financeiro)
+        .nivelLideranca("Gerencia")
+        .turno(turnoComercial)
+        .setor(financeiro)
+        .cargo(analista)
+        .unidadeNegocio(sede)
+        .matricula("B2200")
+        .salario(2000.00)
+        .dtNasc(LocalDate.of(1980,2,2));
+
+        Lider fred = colab_controller.cadastrarColaborador(fredBuilder);
+
+        colab_controller.alterarDtInicio(fred, LocalDate.of(2026, 1, 2));
+
+        System.out.println(fred.getSituacao());
+
+        System.out.println("------------");
+
+        /* Construindo Funcionario de RH */
+
+        // Criando o cadastro de FuncRH com o Builder
+        RHBuilder angelaBuilder = new RHBuilder(
+            "Geraldo Inocencio Gentil", 
+            "899.887.653-88"
+        ).areaAtuacao("Treinamento")
+        .turno(turnoComercial)
+        .setor(financeiro)
+        .cargo(analista)
+        .unidadeNegocio(sede)
+        .matricula("B2200")
+        .salario(2000.00)
+        .dtNasc(LocalDate.of(1980,2,2));
+
+        FuncRH angela = colab_controller.cadastrarColaborador(angelaBuilder);
+
+        colab_controller.alterarDtInicio(angela, LocalDate.of(2026, 1, 2));
+
+        System.out.println(angela.getSituacao());
+
     }
 }
